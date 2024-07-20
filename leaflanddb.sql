@@ -13,7 +13,7 @@ CREATE TABLE product(
 	price_in_cents INTEGER NOT NULL,
 	image_url TEXT,
 	total_stock INTEGER NOT NULL DEFAULT 0,
-	category_id INTEGER NOT NULL REFERENCES category(id),
+	category_id INTEGER NULL REFERENCES category(id),
 	created_at TIMESTAMP DEFAULT NOW(),
 	updated_at TIMESTAMP DEFAULT NOW()
 );
